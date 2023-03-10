@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  .inputDiv{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 35px;
+    gap: 20px;
+  }
+
+.buttonPara{
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+ 
+.homePage{
+  padding: 10px;
+  width: 90%;
+  margin: 10px auto 0 auto;
+}
