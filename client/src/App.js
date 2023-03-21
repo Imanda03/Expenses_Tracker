@@ -4,8 +4,11 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Navbar from './Component/NavBar';
 import LoginPage from './Pages/LoginPage';
 import HomePage from './Pages/HomePage';
+// import {useSelector} from 'react-dom';
 
 function App() {
+
+  // const isAuth = Boolean(useSelector((state) => state.token));
   return (
     <div className="App">
       <BrowserRouter>

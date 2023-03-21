@@ -3,8 +3,12 @@ import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 
 export const addRegister = async(req, res) => {
+    // console.log("here")
     try {
     const {fullName, userName, password, rePassword} = req.body;
+
+        const checkUser = User.findOne({"userName" :userName});
+
         const salt = await bcrypt.genSalt();
         const passwordHash = await bcrypt.hash(password, salt);
         const rePasswordHash = await bcrypt.hash(rePassword, salt);
@@ -15,7 +19,8 @@ export const addRegister = async(req, res) => {
         rePassword: rePasswordHash
     });
 
-    if(userName){
+    if(checkUser.userName){
+        // console.log(checkUser);
         return res.status(500).json("User Already exist");
     }else{
         await newUser.save();

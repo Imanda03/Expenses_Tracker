@@ -11,10 +11,12 @@ import ContactMailIcon from "@mui/icons-material/ContactMail";
 import LockPersonIcon from "@mui/icons-material/LockPerson";
 import GroupAddIcon from "@mui/icons-material/GroupAdd";
 import { addRegister } from "../services/Api";
-import { Navigate } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
+// import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
+  const navigate = useNavigate();
+
   const [users, setUsers] = React.useState({
     fullName: "",
     userName: "",
@@ -27,10 +29,10 @@ const Register = () => {
   };
 
   const submitData = (e) => {
-    const { fullName, userName, password, rePassword } = users;
+    // const { fullName, userName, password, rePassword } = users;
 
     addRegister(users);
-    <Navigate to="/login" />;
+    navigate("/login");
   };
 
   return (

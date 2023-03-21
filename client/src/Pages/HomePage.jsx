@@ -34,9 +34,14 @@ const HomePage = () => {
         Create New
       </Button>
       <div className="sub-homePage">
-        {/* {accountBookValue.map((aValue) => {
-          return <li key={aValue.id}>{aValue.accountBook}</li>;
-        })} */}
+        <div className="inner-account">
+          <div className="accountName">Name:Today</div>
+          <div className="amount">Amount:500</div>
+        </div>
+        <div className="secondInner-account">
+          <div className="accountName">Name:Yesterday</div>
+          <div className="amount">Amount:1000</div>
+        </div>
       </div>
       <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
         <div className="inputDiv">

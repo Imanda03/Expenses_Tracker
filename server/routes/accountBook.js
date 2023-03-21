@@ -1,5 +1,5 @@
 import express from "express";
-import AccountBook from "../schema/addAccountBook";
+import AccountBook from "../schema/addAccountBook.js";
 
 const router = express.Router();
 
